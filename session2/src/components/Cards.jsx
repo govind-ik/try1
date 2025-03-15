@@ -3,11 +3,12 @@ import React from 'react'
 const Cards = (props) => {
     console.log(props)
   return (
-    <div>
-        <h1>{props.user}</h1>
-        <h2>{props.class}</h2>
-        <h3>{props.city}</h3>
-    </div>
+    <div class="card">
+  <h2 class="name">{props.name}</h2>
+  <p class="profession">{props.profession}</p>
+  <p class="city">{props.city}</p>
+</div>
+
   )
 }
 

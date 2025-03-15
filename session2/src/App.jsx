@@ -12,7 +12,41 @@ const App = () => {
   //   console.log(user);
   //   setUser('')
   // }
+  // const name="govind";
+  // const clas="14";
+  // const city="prayagraj"
+
+  const user1=[
+    {
+      "name": "John Doe",
+      "profession": "Software Engineer",
+      "city": "New York, USA"
+    },
+    {
+      "name": "Alice Smith",
+      "profession": "Graphic Designer",
+      "city": "Los Angeles, USA"
+    },
+    {
+      "name": "Rahul Sharma",
+      "profession": "Data Scientist",
+      "city": "Bangalore, India"
+    },
+    {
+      "name": "Sophia Martinez",
+      "profession": "Marketing Manager",
+      "city": "Toronto, Canada"
+    },
+    {
+      "name": "Liam O'Connor",
+      "profession": "Cybersecurity Analyst",
+      "city": "Dublin, Ireland"
+    }
+  ]
+  
+
   return (
+    
     <div>
       {/* <Header/>
       //<Header/>
@@ -27,10 +61,14 @@ const App = () => {
       <button>press</button>
       </form>
       */}
-      <div className="car">
-        <Cards user='govind' class='14' city='prayagrag'/>
-      </div>
+     <div>
+      {user1.map(function(e){
+        return <Cards name={e.name} profession={e.profession} city={e.city} />
+      })}
+     </div>
       
+     
+
     </div>
   )
 }

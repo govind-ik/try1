@@ -84,3 +84,42 @@ input{
   align-self: center;
   margin-left: 100px;
 }
+
+.card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: mediumaquamarine;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profession {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.city {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
