@@ -1,34 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react'
+import Cards from './components/Cards.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+const App = () => {
+  //const [user, setUser] = useState('')
+  //username=user;
+  // const fun1=(e)=>{
+  //   e.preventDefault();
+    
+  //   console.log(user);
+  //   setUser('')
+  // }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      {/* <Header/>
+      //<Header/>
+      <h1>chal rha h ki v nhi</h1>
+      <form onSubmit={(e)=>{
+        fun1(e)
+      }}>
+      
+      <input placeholder='enter' value={user} onChange={(e)=>{
+        setUser(e.target.value)
+      }}></input>
+      <button>press</button>
+      </form>
+      */}
+      <div className="car">
+        <Cards user='govind' class='14' city='prayagrag'/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      
+    </div>
   )
 }
 
