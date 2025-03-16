@@ -4,7 +4,7 @@ const Cards = (props) => {
     console.log(props)
   return (
     <div className='card'>
-      <img src={props.photo}/>
+      <img src={props.photo} className='ii'/>
       
     </div>
 
