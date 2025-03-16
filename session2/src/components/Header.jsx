@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { d } from '../context/UserContext.jsx';
 
 
 //const [first, setfirst] = useState(second)
 const Header = () => {
+  const user=useContext(d);
   return (
     <>
         <nav className="navbar">
-          <input placeholder='enter to search' ></input>
-          <Link to='/'>Home</Link>
-          <Link to='/About'>About</Link>
-          <Link to='/Landing'>Landing</Link>
+         // <h1>{user}</h1>
         </nav>
     </>
   )

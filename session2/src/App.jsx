@@ -1,11 +1,12 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect, useContext } from 'react'
 import Cards from './components/Cards.jsx';
 import axios from 'axios';
-import { Routes, Route } from 'react-router-dom';
+//import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx'
 import Landing from './pages/Landing.jsx'
 import Header from './components/Header.jsx';
+import { d } from './context/UserContext.jsx';
 
 
 const App = () => {
@@ -62,7 +63,7 @@ const App = () => {
   
  //error is we are never calling function jo ki krega to agar f ko hata de to chal jayega wrna ek button bna lete h on click pe chle.
 
- 
+  const {theme,toggle}=useContext(d);
   
 
   return (
@@ -99,14 +100,23 @@ const App = () => {
 
 //     </div>
 //   
-<div>
-  <Header/>
-  <Routes>
-    <Route path='/' element={<Home/>} />
-    <Route path='/About' element={<About/>}/>
-    <Route path='/Landing' element={<Landing/> } />
+// {/* <div>
+//   <Header/>
+//   <Routes>
+//     <Route path='/' element={<Home/>} />
+//     <Route path='/About' element={<About/>}/>
+//     <Route path='/Landing' element={<Landing/> } />
 
-  </Routes>
+//   </Routes>
+// </div> */}
+<div style={{
+        background: theme === "light" ? "#fff" : "#333",
+        color: theme === "light" ? "#000" : "#fff",
+        padding: "60vh",
+        textAlign: "center",
+      }}>
+  <button onClick={toggle}> colour changes</button>
+
 </div>
 
 
